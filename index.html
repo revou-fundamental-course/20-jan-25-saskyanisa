@@ -6,5 +6,31 @@
     <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h2 style="background-color:mediumseagreen;">Kalkulator BMI</h2>
+      <form>
+        <div class="form-group">
+          <label>Jenis Kelamin:</label>
+          <div class="gender-group">
+            <input type="radio" name="gender" id="pria"><span style="font-size:30px;">👨</span><label for="pria">Pria</label>
+            <input type="radio" name="gender" id="wanita"><span style="font-size: 30px;">&#128105;</span><label for="wanita">Wanita</label>
+          </div>
+        <div class="form-group">
+          <label for="age">Usia (tahun)</label>
+          <input type="number" id="age" />
+        </div>
+        <div class="form-group">
+          <label for="weight">Berat Badan (kg)</label>
+          <input type="number" id="weight" />
+        </div>
+        <div class="form-group">
+          <label for="height">Tinggi Badan (cm)</label>
+          <input type="number" id="height" />
+        </div>
+        <button type="button" class="btn-primary" onclick="calculateBMI()">Hitung BMI</button>
+        <button type="reset" class="btn-secondary">Reset</button>
+      </form>
+    </div>
+  </body>
 </html>
