@@ -1,18 +1,70 @@
 /* Ini File CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f8f9fa;
+  /* background-color: #f8f9fa; */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
   height: 100vh;
 }
-.container {
-  background-color: white;
+header {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  width: 100%;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+.intro {
+  flex: 1; /* Paragraf mengambil ruang lebih besar */
+  max-width: 40%;
+  text-align: justify;
+}
+.form-container {
+  flex: 1; /* Form mengambil ruang yang tersisa */
+  max-width: 50%;
+}
+.result-container {
+  flex: 1;
+  max-width: 50%;
+  background: #f0f3f5;
   padding: 20px;
   border-radius: 10px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 20px;
+  /* width: 70%; */
+  /* max-width: 400px; */
+  /* margin: 2px auto; */
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 350px;
+}
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 80%;
+  margin-top: 20px;
 }
 .form-group {
   margin-bottom: 20px;
@@ -59,4 +111,73 @@ button {
 .btn-secondary {
   background-color: #6c757d;
   color: white;
+}
+.result {
+  text-align: center;
+  margin-left: 50%;
+  margin: 20px auto;
+}
+#result.show {
+  display: block;
+}
+.status {
+  margin: 10px auto;
+  padding: 50px 300px 50px 40px;
+  /* background-color: #bcf7ff85; */
+  border-radius: 8px;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.van,
+.note {
+  text-align: left;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-grow: 1;
+  margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .intro,
+  .form-container {
+    max-width: 100%;
+  }
+}
+footer {
+  background: #343a40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+}
+.button-container {
+  display: flex;
+  justify-content: center; /* Pusatkan tombol */
+  gap: 15px; /* Beri jarak antar tombol */
+  margin-top: 20px; /* Beri jarak dari elemen sebelumnya */
+}
+
+.button2 {
+  display: inline-block;
+  background-color: #007bff; /* Warna biru */
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.button2:hover {
+  background-color: #0056b3; /* Warna lebih gelap saat hover */
 }
